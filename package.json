@@ -3,19 +3,19 @@
     "version": "0.0.2",
     "main": "dist/index.js",
     "module": "dist/index.js",
-    "description": "Propus scope packages!",
-    "author": "The Sandulph",
+    "description": "Propus coming soon...",
+    "author": "Propus Team",
     "license": "MIT",
-    "homepage": "https://github.com/thesandulph/phantom-utility#readme",
+    "homepage": "https://github.com/thesandulph/propus-utility#readme",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/thesandulph/phantom-utility.git"
+        "url": "git+https://github.com/thesandulph/propus-utility.git"
     },
     "bugs": {
-        "url": "https://github.com/thesandulph/phantom-utility/issues"
+        "url": "https://github.com/thesandulph/propus-utility/issues"
     },
     "keywords": [
-        "phantom"
+        "propus"
     ],
     "pre-commit": [
         "lint"
