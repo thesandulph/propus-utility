@@ -1,19 +1,6 @@
 import isValidPath from 'is-valid-path';
 
 export equal from 'fast-deep-equal';
-export {
-    camelCase,
-    capitalCase,
-    constantCase,
-    dotCase,
-    headerCase,
-    noCase,
-    paramCase,
-    pascalCase,
-    pathCase,
-    sentenceCase,
-    snakeCase,
-} from 'change-case';
 
 const patterns = {
     currency: /\B(?=(\d{3})+(?!\d))/g,

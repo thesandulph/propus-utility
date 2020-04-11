@@ -3,7 +3,7 @@ import cookieStorage from 'store/storages/cookieStorage';
 import localStorage from 'store/storages/localStorage';
 import memoryStorage from 'store/storages/memoryStorage';
 import sessionStorage from 'store/storages/sessionStorage';
-import {constantCase} from './value';
+import {constantCase} from './string';
 
 const storage_types = {
     'cookie': cookieStorage,
