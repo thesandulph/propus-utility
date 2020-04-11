@@ -1,0 +1,55 @@
+{
+    "name": "@propus/utility",
+    "version": "0.0.2",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "description": "Propus scope packages!",
+    "author": "The Sandulph",
+    "license": "MIT",
+    "homepage": "https://github.com/thesandulph/phantom-utility#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/thesandulph/phantom-utility.git"
+    },
+    "bugs": {
+        "url": "https://github.com/thesandulph/phantom-utility/issues"
+    },
+    "keywords": [
+        "phantom"
+    ],
+    "pre-commit": [
+        "lint"
+    ],
+    "scripts": {
+        "clean": "rimraf dist",
+        "clean-all": "rimraf dist node_modules yarn.lock package-lock.json",
+        "lint": "echo LINITING comming soon!",
+        "prerefresh": "yarn clean-all",
+        "refresh": "yarn install",
+        "prebuild": "yarn clean && yarn lint",
+        "build": "yarn rollup -c",
+        "prepublishOnly": "yarn build"
+    },
+    "dependencies": {
+        "change-case": "^4.1.1",
+        "fast-deep-equal": "^3.1.1",
+        "initialism": "^1.0.1",
+        "is-valid-path": "^0.1.1",
+        "query-string": "^6.11.1",
+        "store": "^2.0.12"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.7.0",
+        "@babel/core": "^7.7.2",
+        "@babel/plugin-proposal-class-properties": "^7.7.4",
+        "@babel/plugin-proposal-export-default-from": "^7.8.3",
+        "@babel/preset-env": "^7.7.4",
+        "@babel/preset-react": "^7.7.1",
+        "@rollup/plugin-commonjs": "^11.0.1",
+        "@rollup/plugin-node-resolve": "^7.0.0",
+        "pre-commit": "^1.2.2",
+        "rimraf": "^3.0.0",
+        "rollup": "^1.27.5",
+        "rollup-plugin-babel": "^4.3.3"
+    }
+}
