@@ -5,28 +5,54 @@ import memoryStorage from 'store/storages/memoryStorage';
 import sessionStorage from 'store/storages/sessionStorage';
 import {constantCase} from './string';
 
-const storage_types = {
-    'cookie': cookieStorage,
-    'local': localStorage,
-    'memory': memoryStorage,
-    'session': sessionStorage,
-};
-
-export const createStorage = (type, ...params) => {
-    const store = engine.createStore([storage_types[type]]);
-    return (key, initial) => {
-        const storage_key = constantCase([...params, key].filter(Boolean).join('-'));
-        if (!store.get(storage_key)) {
-            store.set(storage_key, initial)
-        }
-        return {
-            clear: store.clearAll,
-            each: store.each,
-            get: () => store.get(storage_key),
-            remove: () => store.remove(storage_key),
-            set: data => store.set(storage_key, data),
-            observe: observer => store.observe(storage_key, observer),
-            unobserve: observer_id => store.unobserve(observer_id),
-        }
+export class Storage {
+    static types = {
+        'cookie': cookieStorage,
+        'local': localStorage,
+        'memory': memoryStorage,
+        'session': sessionStorage,
     };
-};
+
+    _store = {};
+    _key = null;
+
+    constructor(type = 'memory', ...params) {
+        this.store = type;
+        this.key = params;
+    }
+
+    initialize(value) {
+        if (!this.get()) {
+            this.set(value)
+        }
+    }
+
+    get key() {
+        return this._key;
+    }
+
+    set key(value) {
+        this._key = constantCase(value.filter(Boolean).join('-'));
+    }
+
+    get store() {
+        return this._store;
+    }
+
+    set store(value) {
+        const type = Storage.types[value];
+        this._store = engine.createStore([type]);
+    }
+
+    remove() {
+        this.store.remove(this.key);
+    }
+
+    get() {
+        this.store.get(this.key);
+    }
+
+    set(value) {
+        this.store.set(this.key, value);
+    }
+}

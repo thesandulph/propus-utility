@@ -27,6 +27,10 @@ export const isArray = value => value && typeof value === 'object' && value.cons
 
 export const isObject = value => value && typeof value === 'object' && value.constructor === Object;
 
+export const isEmptyObject = value => isObject(value) && !Object.keys(value).length;
+
+export const isPromise = value => value && typeof value === 'object' && value.constructor === Promise;
+
 export const isRegExp = value => value && typeof value === 'object' && value.constructor === RegExp;
 
 export const isFunction = value => typeof value === 'function';
@@ -44,6 +48,16 @@ export const hasValue = value => value !== null && typeof value !== 'undefined';
 export const rangeArray = (start, end) => Array.from({length: end - start}, (item, index) => start + index + 1);
 
 export const toArray = value => (isArray(value) ? value : [value]).filter(Boolean);
+
+export const toObject = (value) => {
+    if(isObject(value)) {
+        return value;
+    }
+    if(isArray(value)) {
+        return {...value};
+    }
+    return null;
+};
 
 export const toCurrency = (value, separator = ',') => {
     if (isNumeric(value)) {

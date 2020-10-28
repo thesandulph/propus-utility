@@ -5,10 +5,10 @@ import {
 
 export class Uri{
     constructor(url) {
-        this.init(url);
+        this.initialize(url);
     }
 
-    init(url) {
+    initialize(url) {
         try {
             const uri = new URL(url);
             this.get = key => key ? uri[key] : uri;

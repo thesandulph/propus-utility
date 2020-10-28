@@ -17,7 +17,7 @@ const read = (file, index) => new Promise(
             lastModified,
             lastModifiedDate,
             index,
-            result: reader.result,
+            hash: reader.result,
         });
     }
 );

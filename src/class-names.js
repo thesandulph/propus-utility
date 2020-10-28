@@ -1,15 +1,11 @@
 import {isArray, isObject} from './value';
 
 export const classNames = (...params) =>
-    params.reduce((accumulator, item) => {
-        let value = item;
-        if (isArray(value)) {
-            value = classNames(...value);
-        } else if (isObject(value)) {
-            value = classNames(...Object.keys(item).filter(key => item[key]));
+    params.map((item) => {
+        if (isArray(item)) {
+            return classNames(...item);
+        } else if (isObject(item)) {
+            return classNames(...Object.keys(item).filter(key => item[key]));
         }
-        return [
-            ...accumulator,
-            value,
-        ];
-    }, []).filter(Boolean).join(' ');
+        return item;
+    }).filter(Boolean).join(' ');

@@ -1,6 +1,6 @@
 {
     "name": "@propus/utility",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "main": "dist/index.js",
     "module": "dist/index.js",
     "description": "Propus coming soon...",
@@ -36,7 +36,8 @@
         "initialism": "^1.0.1",
         "is-valid-path": "^0.1.1",
         "query-string": "^6.11.1",
-        "store": "^2.0.12"
+        "store": "^2.0.12",
+        "uuid": "^8.3.0"
     },
     "devDependencies": {
         "@babel/cli": "^7.7.0",
