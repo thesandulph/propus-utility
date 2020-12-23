@@ -5,5 +5,5 @@ src
 .gitignore
 gulpfile.js
 rollup.config.js
-README.md
-TODO.md
+readme.md
+todo.md

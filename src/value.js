@@ -1,4 +1,4 @@
-import isValidPath from 'is-valid-path';
+import isInvalidPath from 'is-invalid-path';
 
 export equal from 'fast-deep-equal';
 
@@ -15,7 +15,7 @@ export const isEmail = value => !!patterns.email.test(value);
 
 export const isUrl = value => !!patterns.url.test(value);
 
-export const isPath = value => isValidPath(value);
+export const isPath = value => !isInvalidPath(value);
 
 export const isNumber = value => typeof value === 'number' && isFinite(value);
 

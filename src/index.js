@@ -4,5 +4,5 @@ export * from './function';
 export * from './storage';
 export * from './string';
 export * from './universal-identifier';
-export * from './uri';
+export * from './url';
 export * from './value';

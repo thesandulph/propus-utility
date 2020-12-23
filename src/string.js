@@ -1,6 +1,5 @@
-import * as change_case from 'change-case';
 import initialism from 'initialism';
-import query_string from 'query-string';
+import * as change_case from 'change-case';
 
 
 export const camelCase = change_case.camelCase;
@@ -16,6 +15,3 @@ export const sentenceCase = change_case.sentenceCase;
 export const snakeCase = change_case.snakeCase;
 
 export const abbreviate = initialism;
-
-export const parseQuery = query_string.parse;
-export const stringifyQuery = query_string.stringify;
