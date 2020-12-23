@@ -21,15 +21,16 @@
         "lint"
     ],
     "scripts": {
+        "lint": "echo \"LINITING comming soon!\"",
         "clean": "rimraf dist node_modules package-lock.json yarn.lock",
         "postclean": "yarn cache clean",
         "prerefresh": "yarn clean",
         "refresh": "yarn install",
-        "lint": "echo \"LINITING comming soon!\"",
-        "prebuild": "yarn refresh",
-        "build": "yarn lint",
-        "postbuild": "yarn rollup -c",
-        "prepublishOnly": "yarn build"
+        "prebuild": "yarn lint",
+        "build": "yarn rollup -c",
+        "prebuild:publish": "yarn refresh",
+        "build:publish": "yarn build",
+        "prepublishOnly": "yarn build:publish"
     },
     "dependencies": {
         "change-case": "^4.1.2",
