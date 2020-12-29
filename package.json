@@ -1,6 +1,6 @@
 {
     "name": "@propus/utility",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "main": "dist/index.js",
     "module": "dist/index.js",
     "description": "Propus coming soon...",
@@ -42,17 +42,17 @@
         "uuid": "^8.3.2"
     },
     "devDependencies": {
-        "@babel/cli": "^7.7.0",
-        "@babel/core": "^7.7.2",
-        "@babel/plugin-proposal-class-properties": "^7.7.4",
-        "@babel/plugin-proposal-export-default-from": "^7.8.3",
-        "@babel/preset-env": "^7.7.4",
-        "@babel/preset-react": "^7.7.1",
-        "@rollup/plugin-commonjs": "^11.0.1",
-        "@rollup/plugin-node-resolve": "^7.0.0",
+        "@babel/cli": "^7.12.10",
+        "@babel/core": "^7.12.10",
+        "@babel/plugin-proposal-class-properties": "^7.12.1",
+        "@babel/plugin-proposal-export-default-from": "^7.12.1",
+        "@babel/preset-env": "^7.12.11",
+        "@babel/preset-react": "^7.12.10",
+        "@rollup/plugin-commonjs": "^17.0.0",
+        "@rollup/plugin-node-resolve": "^11.0.1",
         "pre-commit": "^1.2.2",
-        "rimraf": "^3.0.0",
-        "rollup": "^1.27.5",
-        "rollup-plugin-babel": "^4.3.3"
+        "rimraf": "^3.0.2",
+        "rollup": "^2.35.1",
+        "rollup-plugin-babel": "^4.4.0"
     }
 }
