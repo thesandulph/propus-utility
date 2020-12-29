@@ -21,7 +21,7 @@
         "lint"
     ],
     "scripts": {
-        "lint": "echo \"LINITING comming soon!\"",
+        "lint": "echo \"LINTING comming soon!\"",
         "clean": "rimraf dist node_modules package-lock.json yarn.lock",
         "postclean": "yarn cache clean",
         "prerefresh": "yarn clean",
