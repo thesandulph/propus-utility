@@ -16,7 +16,7 @@ export class Storage {
     _store = {};
     _key = null;
 
-    constructor(type = 'memory', ...params) {
+    constructor(type, ...params) {
         this.store = type;
         this.key = params;
     }
@@ -44,15 +44,15 @@ export class Storage {
         this._store = engine.createStore([type]);
     }
 
-    remove() {
-        this.store.remove(this.key);
-    }
-
     get() {
-        this.store.get(this.key);
+        return this.store.get(this.key);
     }
 
     set(value) {
         this.store.set(this.key, value);
+    }
+
+    remove() {
+        this.store.remove(this.key);
     }
 }

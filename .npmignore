@@ -3,6 +3,7 @@ src
 .babelrc
 .editorconfig
 .gitignore
+jetbrains.dic
 gulpfile.js
 rollup.config.js
 readme.md
