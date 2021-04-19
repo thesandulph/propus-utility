@@ -3,7 +3,7 @@ import cookieStorage from 'store/storages/cookieStorage';
 import localStorage from 'store/storages/localStorage';
 import memoryStorage from 'store/storages/memoryStorage';
 import sessionStorage from 'store/storages/sessionStorage';
-import {constantCase} from './string';
+import {changeCase} from './string';
 
 export class Storage {
     static types = {
@@ -32,7 +32,7 @@ export class Storage {
     }
 
     set key(value) {
-        this._key = constantCase(value.filter(Boolean).join('-'));
+        this._key = changeCase(value.filter(Boolean).join('-'));
     }
 
     get store() {

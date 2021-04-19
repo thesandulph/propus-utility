@@ -10,7 +10,7 @@ export default {
     input: pkg.main.replace('dist', 'src'),
     output: {
         file: pkg.main,
-        format: 'esm',
+        format: 'cjs',
         sourcemap: true,
     },
     external,
